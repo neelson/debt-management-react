@@ -1,0 +1,13 @@
+@import "../../../../styles/colors.scss";
+
+.debtListItemEmpty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  
+  span {
+    font-size: 28px;
+    margin-top: 50%;
+  }
+}

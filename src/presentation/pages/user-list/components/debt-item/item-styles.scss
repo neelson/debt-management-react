@@ -1,0 +1,68 @@
+@import "../../../../styles/colors.scss";
+
+.debtListItemWrap {
+  height: 100px;
+  padding: 15px;
+  width: 100%;
+  background-color: $white;
+ 
+  display: grid;
+  grid-template-columns: calc(100% - 100px) 100px;
+  align-items: center;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  box-shadow: 3px 2px 7px $black;
+  margin: 10px 0;
+
+  .infos {
+    padding: 15px;
+    h3 {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    h1 {
+      font-size: 18px;
+    }
+    span {
+      text-decoration: none;
+    }
+  }
+  .actions {
+    display: flex;
+    flex-direction: row;
+    
+    button {
+      background-color: unset;
+      border: unset;
+      padding: 0 2px;
+      cursor: pointer;
+    }
+  }
+  
+  &:hover {
+    opacity: .9;
+    transform: translateY(-5px);
+    box-shadow: 5px 4px 9px $black;
+    min-height: 110px;
+    height: unset;
+    transition: all .3s ease;
+    align-items: flex-start;
+
+    .infos {
+      h3 {
+        white-space: unset;
+        overflow: unset;
+        text-overflow: unset;
+        transition: all .5s ease;
+      }
+    }
+  }
+
+}
+
+@media only screen and (max-width: 600px) {
+  .debtListItemWrap {
+    padding: 5px;
+  }
+}
